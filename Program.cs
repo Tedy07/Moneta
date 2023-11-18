@@ -29,7 +29,7 @@ if (chosenOperation == 1)
     Console.WriteLine("1. Gold");
     Console.WriteLine("2. Silver");
     Console.WriteLine("3. Platinum");
-    Console.WriteLine("Press 1, 2 or 3 ... ");
+    Console.WriteLine("Press 1, 2 or 3");
     Console.ReadLine();
 
     Item item = new Item() { Id = 1, Name = "Filharmonik", WeightOz = 10 };
