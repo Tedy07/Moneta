@@ -10,17 +10,16 @@ Console.WriteLine("1. Add Item");
 Console.WriteLine("2. Remove Item");
 Console.WriteLine("3. Show me Items");
 Console.WriteLine("Press 1, 2 or 3 ... ");
-Console.WriteLine();
+//Console.WriteLine();
 
 string operation = Console.ReadLine();
 int chosenOperation = 0;
 Int32.TryParse(operation, out chosenOperation);
 
 //Nie wiem co z tą kategorią dalej!!!
-string category = Console.ReadLine();
+//string category = Console.ReadLine();
 ItemType chosenCategory;
 //Enum.TryParse(category, out chosenCategory);
-Console.WriteLine( "testowy text");
 
 if (chosenOperation == 1)
 {
@@ -48,4 +47,3 @@ else if (chosenOperation == 3)
 }
 else
 { Console.WriteLine("You have wrong number, sorry try again!!!"); }
- 
