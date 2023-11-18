@@ -20,6 +20,7 @@ Int32.TryParse(operation, out chosenOperation);
 string category = Console.ReadLine();
 ItemType chosenCategory;
 //Enum.TryParse(category, out chosenCategory);
+Console.WriteLine( "testowy text");
 
 if (chosenOperation == 1)
 {
