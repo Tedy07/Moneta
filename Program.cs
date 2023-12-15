@@ -7,7 +7,7 @@ using Moneta;
 internal class Program
 {
     private static void Main(string[] args)
-    {
+    {   //view 1 main menu
         Console.WriteLine("Welcome to Moneta app");
         Console.WriteLine("Please let me know whate you want to do:");
         Console.WriteLine("1. Add Item");
@@ -19,22 +19,21 @@ internal class Program
         int chosenOperation = 0;
         int.TryParse(operation, out chosenOperation);
 
-        //Nie wiem co z tą kategorią dalej!!!
-        //string category = Console.ReadLine();
-        ItemType chosenCategory;
-        //Enum.TryParse(category, out chosenCategory);
-
         if (chosenOperation == 1)
         {
+            //view 2.1 category selection
             Console.WriteLine("You have chosen number 1 and add new Item");
             Console.WriteLine();
             Console.WriteLine("Select item category");
             Console.WriteLine("1. Gold");
             Console.WriteLine("2. Silver");
-            //Console.WriteLine("3. Platinum");
             Console.WriteLine("Press 1 or 2");
             Console.ReadLine();
-
+                        
+            //Tutaj po wybraniu kategorii tworzymy obiekt !!!
+            //string category = Console.ReadLine();
+            ItemType chosenCategory;
+            //Enum.TryParse(category, out chosenCategory);
             // Item item = new Item() { Id = 1, Name = "Filharmonik", WeightOz = 10 };
         }
         else if (chosenOperation == 2)
@@ -62,7 +61,6 @@ internal class Program
             Console.ReadLine();
         }
 
-        //It's hear changes
         else
         { Console.WriteLine("You choose another number!"); }
     }
