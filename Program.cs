@@ -23,12 +23,12 @@ internal class Program
         {
             //view 2.1 category selection
             Console.WriteLine("You have chosen number 1 and add new Item");
-            Console.WriteLine();
             Console.WriteLine("Created a new object");
 
             Console.ReadLine();
 
             //!!! Tutaj tworzymy obiekt czyli dodajemy monetę!!!
+            //na początek ustalimy stałe dane, później zmienimy na wybór.
             Item itemNr1 = new Item();
             itemNr1.Id = 1;
             itemNr1.Name = "Brytania";
@@ -64,5 +64,8 @@ internal class Program
 
         else
         { Console.WriteLine("You choose another number!"); }
+
+        //1Console.WriteLine(Item.itemNr1.Name);
+
     }
 }
