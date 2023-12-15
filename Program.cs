@@ -56,9 +56,6 @@ else if (chosenOperation == 3)
     Console.WriteLine("Press 1, 2 or 3");
     Console.ReadLine();
 
-
-
-    Console.WriteLine("Under construction");
 }
 else
 { Console.WriteLine("You have wrong number, sorry try again!!!"); }
