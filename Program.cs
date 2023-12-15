@@ -24,12 +24,9 @@ internal class Program
             //view 2.1 category selection
             Console.WriteLine("You have chosen number 1 and add new Item");
             Console.WriteLine();
-            Console.WriteLine("Select item category");
-            Console.WriteLine("1. Gold");
-            Console.WriteLine("2. Silver");
             Console.WriteLine("Press 1 or 2");
             Console.ReadLine();
-                        
+
             //Tutaj po wybraniu kategorii tworzymy obiekt !!!
             //string category = Console.ReadLine();
             ItemType chosenCategory;
