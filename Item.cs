@@ -10,12 +10,17 @@ namespace Moneta
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public string Metal { get; set; }
         public int WeightOz { get; set; }
         public DateTime DateOfPurchase { get; set; }
-        
+
+        public void MetodaCosRobiaca()
+        {
+            // metoda testowa
+        }
 
     }
 
-    
+
 
 }

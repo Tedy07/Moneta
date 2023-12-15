@@ -28,11 +28,14 @@ internal class Program
 
             Console.ReadLine();
 
-            //Tutaj po wybraniu kategorii tworzymy obiekt !!!
-            //string category = Console.ReadLine();
-            ItemType chosenCategory;
-            //Enum.TryParse(category, out chosenCategory);
-            // Item item = new Item() { Id = 1, Name = "Filharmonik", WeightOz = 10 };
+            //!!! Tutaj tworzymy obiekt czyli dodajemy monetę!!!
+            Item itemNr1 = new Item();
+            itemNr1.Id = 1;
+            itemNr1.Name = "Brytania";
+            itemNr1.Metal = "gold";
+            itemNr1.WeightOz = 10;
+            itemNr1.DateOfPurchase = DateTime.Now;
+
         }
         else if (chosenOperation == 2)
         {
