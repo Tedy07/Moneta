@@ -11,7 +11,6 @@ namespace Moneta
         public int Id { get; set; }
         public string Name { get; set; }
         public int WeightOz { get; set; }
-        public double PurchasePrice { get; set; }
         public DateTime DateOfPurchase { get; set; }
         
 

@@ -24,7 +24,8 @@ internal class Program
             //view 2.1 category selection
             Console.WriteLine("You have chosen number 1 and add new Item");
             Console.WriteLine();
-            Console.WriteLine("Press 1 or 2");
+            Console.WriteLine("Created a new object");
+
             Console.ReadLine();
 
             //Tutaj po wybraniu kategorii tworzymy obiekt !!!

@@ -10,8 +10,6 @@ namespace Moneta
     {
         Gold = 1,
         Silver = 2,
-        Platinum = 3,
-        Pallad = 7,
-        other = 4,
+       
     }
 }
