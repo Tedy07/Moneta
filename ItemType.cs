@@ -11,6 +11,7 @@ namespace Moneta
         Gold = 1,
         Silver = 2,
         Platinum = 3,
+        Pallad = x
         other = 4,
     }
 }
