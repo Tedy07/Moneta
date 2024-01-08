@@ -21,51 +21,26 @@ internal class Program
 
         if (chosenOperation == 1)
         {
-            //view 2.1 category selection
-            Console.WriteLine("You have chosen number 1 and add new Item");
-            Console.WriteLine("Created a new object");
-
+            Console.WriteLine("You have chosen number 1, add new Item");
+            Console.WriteLine("Created a new Item");
             Console.ReadLine();
-
-            //!!! Tutaj tworzymy obiekt czyli dodajemy monetę!!!
-            //na początek ustalimy stałe dane, później zmienimy na wybór.
-            Item itemNr1 = new Item();
-            itemNr1.Id = 1;
-            itemNr1.Name = "Brytania";
-            itemNr1.Metal = "gold";
-            itemNr1.WeightOz = 10;
-            itemNr1.DateOfPurchase = DateTime.Now;
-
         }
         else if (chosenOperation == 2)
         {
-            Console.WriteLine("You have chosen number 2 and remove Item");
-            Console.WriteLine();
-            Console.WriteLine("Select what you want to remove?");
-            Console.WriteLine("1. I want remove gold coin");
-            Console.WriteLine("2. I want remove silver coin");
-            Console.WriteLine("Press 1 or 2");
+            Console.WriteLine("You have chosen number 2, You want remove Item");
+            Console.WriteLine("Remove a Item");
             Console.ReadLine();
-
         }
         else if (chosenOperation == 3)
         {
-            Console.WriteLine("You have chosen number 3 and show you Items");
-            Console.WriteLine();
-            Console.WriteLine("Select what you want to show?");
-            Console.WriteLine("1. Show me all");
-            Console.WriteLine("2. Show me gold coin");
-            Console.WriteLine("3. Show me silver coin");
-            Console.WriteLine("Press 1, 2 or 3");
-            Console.WriteLine("Test nr 1 changes commit Press 1, 2 or 3");
-            Console.WriteLine("Test nr 2 changes commit Press 1, 2 or 3");
+            Console.WriteLine("You have chosen number 3, show me Items");
+            Console.WriteLine("Showe me all Item");
             Console.ReadLine();
         }
-
         else
-        { Console.WriteLine("You choose another number!"); }
+        { Console.WriteLine("Dial another number!"); }
 
-        //1Console.WriteLine(Item.itemNr1.Name);
+
 
     }
 }

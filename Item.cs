@@ -8,16 +8,13 @@ namespace Moneta
 {
     public class Item
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Metal { get; set; }
-        public int WeightOz { get; set; }
-        public DateTime DateOfPurchase { get; set; }
+        private int Id;                                                      // { get; set; }
+        private string Metal;         //s - silver, g - gold     moneta      // { get; set; }
+        private int WeightOz;                                                //{ get; set; }
+        private int Price;                                                   //{ get; set
+                                                                             //whate the 
 
-        public void MetodaCosRobiaca()
-        {
-            // metoda testowa
-        }
+       
 
 
     }
