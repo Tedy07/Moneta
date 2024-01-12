@@ -22,21 +22,23 @@ internal class Program
         if (chosenOperation == 1)
         {
             Console.WriteLine("You have chosen number 1, add new Item");
-            Console.WriteLine("Created a new Item");
+            Console.WriteLine("Created a new Item, push Enter");
             Console.ReadLine();
 
             ItemMoneta Moneta1 = new ItemMoneta();
-            Moneta1.Id = 1;
-            Moneta1.Metal = "gold";
-            Moneta1.WeightOz = 10;
-            Moneta1.Price = 200;
+            // Moneta1.Id = 1;
+            Moneta1.GetMetal("gold");
+            Moneta1.GetWeightOz(10);
+            Moneta1.GetPrice(200);
 
             ItemMoneta Moneta2 = new ItemMoneta();
-            Moneta1.Id = 2;
-            Moneta1.Metal = "silver";
-            Moneta1.WeightOz = 20;
-            Moneta1.Price = 50;
+            Moneta2.Id = 2;
+            Moneta2.Metal = "silver";
+            Moneta2.WeightOz = 20;
+            Moneta2.Price = 50;
 
+            Console.WriteLine("You have metal: " + Moneta1.Metal + ", weight: " + Moneta1.WeightOz + ", price: " + Moneta1.Price);
+            Console.ReadKey();
 
         }
         else if (chosenOperation == 2)
@@ -54,7 +56,7 @@ internal class Program
         else
         { Console.WriteLine("Dial another number!"); }
 
-       
+
 
     }
 }
