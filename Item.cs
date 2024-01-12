@@ -11,12 +11,9 @@ namespace Moneta
         private int Id;                                                      // { get; set; }
         private string Metal;         //s - silver, g - gold     moneta      // { get; set; }
         private int WeightOz;                                                //{ get; set; }
-        private int Price;                                                   //{ get; set
-                                                                             //whate the 
-
-       
-
-
+        private int Price;                                                   //{ get; set}
+                                                                             
+        
     }
 
 

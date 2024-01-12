@@ -17,16 +17,16 @@ namespace Moneta
              return Items; 
         }
 
-        public int AddNewItem()
-        {
-            Item item = new Item()
-            {
-                Id = 1,
-                Name = "Liść Klonowy"
-            };
+        //public int  AddNewItem()
+        //{
+        //    Item item = new Item()
+        //    {
+        //        Id = 1,
+        //        Name = "Liść Klonowy"
+        //    };
 
-            Items.Add(item);
-        }
+        //    Items.Add(item);
+        //}
 
     }
 }
