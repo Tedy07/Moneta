@@ -24,6 +24,20 @@ internal class Program
             Console.WriteLine("You have chosen number 1, add new Item");
             Console.WriteLine("Created a new Item");
             Console.ReadLine();
+
+            ItemMoneta Moneta1 = new ItemMoneta();
+            Moneta1.Id = 1;
+            Moneta1.Metal = "gold";
+            Moneta1.WeightOz = 10;
+            Moneta1.Price = 200;
+
+            ItemMoneta Moneta2 = new ItemMoneta();
+            Moneta1.Id = 2;
+            Moneta1.Metal = "silver";
+            Moneta1.WeightOz = 20;
+            Moneta1.Price = 50;
+
+
         }
         else if (chosenOperation == 2)
         {
@@ -40,7 +54,7 @@ internal class Program
         else
         { Console.WriteLine("Dial another number!"); }
 
-
+       
 
     }
 }
