@@ -28,9 +28,14 @@ internal class Program
 
             ItemMoneta Moneta1 = new ItemMoneta();
             // Moneta1.Id = 1;
-            Moneta1.SetMetal("gold");
-            Moneta1.SetWeightOz(10);
-            Moneta1.SetPrice(200);
+            Console.WriteLine("This coin is gold or silver? Write hear ...");
+            Moneta1.SetMetal(Console.ReadLine());
+
+            Console.WriteLine("Get my weight this coin");
+            Moneta1.SetWeightOz(int.Parse(Console.ReadLine()));
+
+            Console.WriteLine("Get my price this coin");
+            Moneta1.SetPrice(int.Parse(Console.ReadLine()));
 
             ItemMoneta Moneta2 = new ItemMoneta();
             //Moneta2.Id = 2;
@@ -41,6 +46,10 @@ internal class Program
             Console.WriteLine("You have metal: " + Moneta1.GetMetal() + ", weight: " + Moneta1.GetWeightOz() + ", price: " + Moneta1.GetPrice());
             Console.WriteLine("You have metal: " + Moneta2.GetMetal() + ", weight: " + Moneta2.GetWeightOz() + ", price: " + Moneta2.GetPrice());
             Console.ReadKey();
+
+            //Poniżej próba pobierania danych monety od usera
+            Console.WriteLine();
+
 
         }
         else if (chosenOperation == 2)
