@@ -8,10 +8,10 @@ namespace Moneta
 {
     public class ItemMoneta
     {
-        private int Id;           // id addet automat                       // { get; set; }
-        private string Metal;         //s - silver, g - gold     moneta      // { get; set; }
-        private int WeightOz;                                                //{ get; set; }
-        private int Price;                                                   //{ get; set}
+        //private int Id;                                 
+        private string Metal;         
+        private int WeightOz;                                               
+        private int Price;                                                   
 
         public string GetMetal() { return Metal; }
         public int GetWeightOz() { return WeightOz; }

@@ -21,23 +21,25 @@ internal class Program
 
         if (chosenOperation == 1)
         {
+            Console.WriteLine();
             Console.WriteLine("You have chosen number 1, add new Item");
             Console.WriteLine("Created a new Item, push Enter");
             Console.ReadLine();
 
             ItemMoneta Moneta1 = new ItemMoneta();
             // Moneta1.Id = 1;
-            Moneta1.GetMetal("gold");
-            Moneta1.GetWeightOz(10);
-            Moneta1.GetPrice(200);
+            Moneta1.SetMetal("gold");
+            Moneta1.SetWeightOz(10);
+            Moneta1.SetPrice(200);
 
             ItemMoneta Moneta2 = new ItemMoneta();
-            Moneta2.Id = 2;
-            Moneta2.Metal = "silver";
-            Moneta2.WeightOz = 20;
-            Moneta2.Price = 50;
+            //Moneta2.Id = 2;
+            Moneta2.SetMetal("silver");
+            Moneta2.SetWeightOz(20);
+            Moneta2.SetPrice(50);
 
-            Console.WriteLine("You have metal: " + Moneta1.Metal + ", weight: " + Moneta1.WeightOz + ", price: " + Moneta1.Price);
+            Console.WriteLine("You have metal: " + Moneta1.GetMetal() + ", weight: " + Moneta1.GetWeightOz() + ", price: " + Moneta1.GetPrice());
+            Console.WriteLine("You have metal: " + Moneta2.GetMetal() + ", weight: " + Moneta2.GetWeightOz() + ", price: " + Moneta2.GetPrice());
             Console.ReadKey();
 
         }
