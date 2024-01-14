@@ -8,11 +8,11 @@ internal class Program
 {
     private static void Main(string[] args)
     {   //view 1 main menu
-        Console.WriteLine("Welcome to Moneta app");
-        Console.WriteLine("Please let me know whate you want to do:");
-        Console.WriteLine("1. Add Item");
-        Console.WriteLine("2. Remove Item");
-        Console.WriteLine("3. Show me Items");
+        Console.WriteLine("Welcome to CoinApp");
+        Console.WriteLine("Please let me know, whate you want to do:");
+        Console.WriteLine("1. Add coin item");
+        Console.WriteLine("2. Remove coin item");
+        Console.WriteLine("3. Show me all items");
         Console.WriteLine("Press 1, 2 or 3");
 
         string operation = Console.ReadLine();
@@ -22,13 +22,13 @@ internal class Program
         if (chosenOperation == 1)
         {
             Console.WriteLine();
-            Console.WriteLine("You have chosen number 1, add new Item");
-            Console.WriteLine("Created a new Item, push Enter");
+            Console.WriteLine("You have chosen number 1, add new coin item.");
+            Console.WriteLine("Created a new coin item, push Enter.");
             Console.ReadLine();
 
             ItemMoneta Moneta1 = new ItemMoneta();
             // Moneta1.Id = 1;
-            Console.WriteLine("This coin is gold or silver? Write hear ...");
+            Console.WriteLine("This coin is gold or silver? Write here ...");
             Moneta1.SetMetal(Console.ReadLine());
 
             Console.WriteLine("Get my weight this coin");
@@ -47,21 +47,17 @@ internal class Program
             Console.WriteLine("You have metal: " + Moneta2.GetMetal() + ", weight: " + Moneta2.GetWeightOz() + ", price: " + Moneta2.GetPrice());
             Console.ReadKey();
 
-            //Poniżej próba pobierania danych monety od usera
-            Console.WriteLine();
-
-
         }
         else if (chosenOperation == 2)
         {
-            Console.WriteLine("You have chosen number 2, You want remove Item");
+            Console.WriteLine("You have chosen number 2, You want remove coin item");
             Console.WriteLine("Remove a Item");
             Console.ReadLine();
         }
         else if (chosenOperation == 3)
         {
-            Console.WriteLine("You have chosen number 3, show me Items");
-            Console.WriteLine("Showe me all Item");
+            Console.WriteLine("You have chosen number 3, show me all coins items");
+            Console.WriteLine("Showe me all item");
             Console.ReadLine();
         }
         else
