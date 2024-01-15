@@ -3,11 +3,13 @@
 //public const string FILE_NAME = @"C:\Moneta\ImportFile.xlsx";
 
 using Moneta;
+using System.Threading.Channels;
 
 internal class Program
 {
     private static void Main(string[] args)
-    {   //view 1 main menu
+    {
+        //view 1 main menu
         Console.WriteLine("Welcome to CoinApp");
         Console.WriteLine("Please let me know, whate you want to do:");
         Console.WriteLine("1. Add coin item");
@@ -30,7 +32,7 @@ internal class Program
 
             Console.WriteLine("This coin is gold or silver? Write here ...");
             Coin1.Metal = Console.ReadLine();
-            
+
             Console.WriteLine("Get my weight this coin");
             Coin1.WeightOz = int.Parse(Console.ReadLine());
 
@@ -38,9 +40,36 @@ internal class Program
             Coin1.Price = int.Parse(Console.ReadLine());
 
 
-            Console.WriteLine("You have metal: " + Coin1.Metal + ", weight: 1/" + Coin1.WeightOz + ", price: " + Coin1.Price);
-            Console.WriteLine($"You have metal: {Coin1.Metal}, weight: 1/ {Coin1.WeightOz}, price: {Coin1.Price}");
-            Console.ReadKey();
+            //Console.WriteLine("You have metal: " + Coin1.Metal + ", weight: 1/" + Coin1.WeightOz + ", price: " + Coin1.Price);
+            //Console.WriteLine($"You have metal: {Coin1.Metal}, weight: 1/ {Coin1.WeightOz}, price: {Coin1.Price}");
+
+            //zapis/odczyt, ścieżka do pliku.txt gdzie będą zapisywane dane
+            string path = @"MyPlikCoinApp.txt";
+            StreamWriter sw;
+            if (!File.Exists(path))
+            {
+                sw = File.CreateText(path);
+                Console.WriteLine("File is exist!");
+            }
+            else
+            {
+                sw = new StreamWriter(path, true);
+                Console.WriteLine("File is open!");
+            }
+
+            string tekst1 = $"You have metal: {Coin1.Metal}, weight: 1/{Coin1.WeightOz}, price: {Coin1.Price}";
+            sw.WriteLine(tekst1);
+            sw.Close();
+
+            StreamReader sr = File.OpenText(path);
+            string s = "";
+            int i = 1;
+            Console.WriteLine("\nZawartość pliku, który otwieramy");
+            while ((s = sr.ReadLine()) != null)
+            {
+                Console.WriteLine(i++ + ". " + s);
+            }
+            sr.Close();
 
         }
         else if (chosenOperation == 2)
@@ -59,6 +88,7 @@ internal class Program
         { Console.WriteLine("Dial another number!"); }
 
 
+        Console.ReadKey();
 
     }
 }
