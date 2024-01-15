@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Moneta
 {
-    public class ItemMoneta
+    public class ItemCoin
     {
         //private int Id;                                 
         private string Metal;         

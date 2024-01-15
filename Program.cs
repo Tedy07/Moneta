@@ -26,25 +26,20 @@ internal class Program
             Console.WriteLine("Created a new coin item, push Enter.");
             Console.ReadLine();
 
-            ItemMoneta Moneta1 = new ItemMoneta();
-            // Moneta1.Id = 1;
+            ItemCoin Coin1 = new ItemCoin();
+            
             Console.WriteLine("This coin is gold or silver? Write here ...");
-            Moneta1.SetMetal(Console.ReadLine());
+            Coin1.SetMetal(Console.ReadLine());
 
             Console.WriteLine("Get my weight this coin");
-            Moneta1.SetWeightOz(int.Parse(Console.ReadLine()));
+            Coin1.SetWeightOz(int.Parse(Console.ReadLine()));
 
             Console.WriteLine("Get my price this coin");
-            Moneta1.SetPrice(int.Parse(Console.ReadLine()));
+            Coin1.SetPrice(int.Parse(Console.ReadLine()));
 
-            ItemMoneta Moneta2 = new ItemMoneta();
-            //Moneta2.Id = 2;
-            Moneta2.SetMetal("silver");
-            Moneta2.SetWeightOz(20);
-            Moneta2.SetPrice(50);
-
-            Console.WriteLine("You have metal: " + Moneta1.GetMetal() + ", weight: " + Moneta1.GetWeightOz() + ", price: " + Moneta1.GetPrice());
-            Console.WriteLine("You have metal: " + Moneta2.GetMetal() + ", weight: " + Moneta2.GetWeightOz() + ", price: " + Moneta2.GetPrice());
+            
+            Console.WriteLine("You have metal: " + Coin1.GetMetal() + ", weight: " + Coin1.GetWeightOz() + ", price: " + Coin1.GetPrice());
+            Console.WriteLine("You have metal: " + Coin2.GetMetal() + ", weight: " + Coin2.GetWeightOz() + ", price: " + Coin2.GetPrice());
             Console.ReadKey();
 
         }
