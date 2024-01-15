@@ -27,9 +27,9 @@ internal class Program
             Console.ReadLine();
 
             ItemCoin Coin1 = new ItemCoin();
-            
+
             Console.WriteLine("This coin is gold or silver? Write here ...");
-            Coin1.SetMetal(Console.ReadLine());
+            Coin1.Metal = Console.ReadLine();
 
             Console.WriteLine("Get my weight this coin");
             Coin1.SetWeightOz(int.Parse(Console.ReadLine()));
@@ -37,9 +37,8 @@ internal class Program
             Console.WriteLine("Get my price this coin");
             Coin1.SetPrice(int.Parse(Console.ReadLine()));
 
-            
-            Console.WriteLine("You have metal: " + Coin1.GetMetal() + ", weight: " + Coin1.GetWeightOz() + ", price: " + Coin1.GetPrice());
-            Console.WriteLine("You have metal: " + Coin2.GetMetal() + ", weight: " + Coin2.GetWeightOz() + ", price: " + Coin2.GetPrice());
+
+            Console.WriteLine("You have metal: " + Coin1.Metal + ", weight: " + Coin1.GetWeightOz() + ", price: " + Coin1.GetPrice());
             Console.ReadKey();
 
         }
