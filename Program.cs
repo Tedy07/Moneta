@@ -11,6 +11,7 @@ internal class Program
     {
         //view 1 main menu
         Console.WriteLine("Welcome to CoinApp");
+        Console.WriteLine();
         Console.WriteLine("Please let me know, whate you want to do:");
         Console.WriteLine("1. Add coin item");
         Console.WriteLine("2. Remove coin item");
@@ -24,14 +25,26 @@ internal class Program
         if (chosenOperation == 1)
         {
             Console.WriteLine();
-            Console.WriteLine("You have chosen number 1, add new coin item.");
-            Console.WriteLine("Created a new coin item, push Enter.");
-            Console.ReadLine();
+            Console.WriteLine("You chosen number 1, add new coin item.");
+            Console.WriteLine("Please choose metal coin type");
+            Console.WriteLine("1. gold");
+            Console.WriteLine("2. silver");
+            Console.WriteLine("Press 1 or 2");
+            //Console.ReadLine();
 
             ItemCoin Coin1 = new ItemCoin();
+            int chosenOperation11 = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("This coin is gold or silver? Write here ...");
-            Coin1.Metal = Console.ReadLine();
+            if (chosenOperation11 == 1)
+            {
+                Coin1.Metal = "gold";
+            }
+            else
+            {
+                Coin1.Metal = "silver";
+            }
+
+            // Coin1.Metal = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Get my weight this coin");
             Coin1.WeightOz = int.Parse(Console.ReadLine());
@@ -39,11 +52,7 @@ internal class Program
             Console.WriteLine("Get my price this coin");
             Coin1.Price = int.Parse(Console.ReadLine());
 
-
-            //Console.WriteLine("You have metal: " + Coin1.Metal + ", weight: 1/" + Coin1.WeightOz + ", price: " + Coin1.Price);
-            //Console.WriteLine($"You have metal: {Coin1.Metal}, weight: 1/ {Coin1.WeightOz}, price: {Coin1.Price}");
-
-            //zapis/odczyt, ścieżka do pliku.txt gdzie będą zapisywane dane
+            //blok zapis/odczyt, ścieżka do pliku.txt
             string path = @"MyPlikCoinApp.txt";
             StreamWriter sw;
             if (!File.Exists(path))
@@ -56,11 +65,10 @@ internal class Program
                 sw = new StreamWriter(path, true);
                 Console.WriteLine("File is open!");
             }
-
             string tekst1 = $"You have metal: {Coin1.Metal}, weight: 1/{Coin1.WeightOz}, price: {Coin1.Price}";
             sw.WriteLine(tekst1);
             sw.Close();
-
+            //odczyt danychz pliku
             StreamReader sr = File.OpenText(path);
             string s = "";
             int i = 1;
