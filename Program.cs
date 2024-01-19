@@ -3,6 +3,7 @@
 //public const string FILE_NAME = @"C:\Moneta\ImportFile.xlsx";
 
 using Moneta;
+using System.IO;
 using System.Threading.Channels;
 
 internal class Program
@@ -53,6 +54,7 @@ internal class Program
             Coin1.Price = int.Parse(Console.ReadLine());
 
             //blok zapis/odczyt, ścieżka do pliku.txt
+            // zapis
             string path = @"MyPlikCoinApp.txt";
             StreamWriter sw;
             if (!File.Exists(path))
@@ -66,6 +68,7 @@ internal class Program
                 Console.WriteLine("File is open!");
             }
             string tekst1 = $"You have metal: {Coin1.Metal}, weight: 1/{Coin1.WeightOz}, price: {Coin1.Price}";
+
             sw.WriteLine(tekst1);
             sw.Close();
             //odczyt danychz pliku
@@ -82,15 +85,36 @@ internal class Program
         }
         else if (chosenOperation == 2)
         {
+            Console.WriteLine();
             Console.WriteLine("You have chosen number 2, You want remove coin item");
-            Console.WriteLine("Remove a Item");
+            Console.WriteLine("Please enter the number to be deleted.");
+            int operation2 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("wpisałeś nr " + operation2);
             Console.ReadLine();
         }
         else if (chosenOperation == 3)
         {
-            Console.WriteLine("You have chosen number 3, show me all coins items");
-            Console.WriteLine("Showe me all item");
-            Console.ReadLine();
+            Console.WriteLine();
+            Console.WriteLine("You have chosen number 3, show me all coins");
+            Console.WriteLine("Show me all, press Enter ...");
+            Console.ReadKey();
+
+            //odczyt z pliku
+            string path = @"MyPlikCoinApp.txt";
+            StreamReader sr = File.OpenText(path);
+            string s = "";
+            int i = 1;
+            Console.WriteLine("All in this file:");
+
+            while ((s = sr.ReadLine()) != null)
+            {
+                Console.WriteLine(i++ + ". " + s);
+            }
+            sr.Close();
+
+            Console.WriteLine("The list it's The End.");
+
         }
         else
         { Console.WriteLine("Dial another number!"); }
